@@ -2,6 +2,8 @@ package edu.hitsz.aircraft;
 
 import edu.hitsz.bullet.BaseBullet;
 import edu.hitsz.basic.AbstractFlyingObject;
+import edu.hitsz.shootStrategy.ShootStrategy;
+import edu.hitsz.shootStrategy.straightShoot;
 
 import java.util.List;
 
@@ -17,11 +19,29 @@ public abstract class AbstractAircraft extends AbstractFlyingObject {
      */
     protected int maxHp;
     protected int hp;
+    private int shootNum;
+    private int power;
+    private int direction;
+    private int bulletspeed;
 
-    public AbstractAircraft(int locationX, int locationY, int speedX, int speedY, int hp) {
+    public AbstractAircraft(double locationX, double locationY, double speedX, double speedY, int hp,int shootNum,int power,int direction,int bulletspeed) {
         super(locationX, locationY, speedX, speedY);
         this.hp = hp;
         this.maxHp = hp;
+        this.shootNum=shootNum;
+        this.power=power;
+        this.direction=direction;
+        this.bulletspeed=bulletspeed;
+    }
+
+    private ShootStrategy strategy=new straightShoot();
+
+    public ShootStrategy getStrategy() {
+        return strategy;
+    }
+
+    public void setStrategy(ShootStrategy strategy) {
+        this.strategy = strategy;
     }
 
     public void decreaseHp(int decrease){
@@ -41,6 +61,39 @@ public abstract class AbstractAircraft extends AbstractFlyingObject {
         this.hp+=hp;
         if(this.hp>maxHp)this.hp=maxHp;
     }
+
+    public void setShootNum(int shootNum) {
+        this.shootNum = shootNum;
+    }
+
+    public int getShootNum() {
+        return shootNum;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public void setPower(int power) {
+        this.power = power;
+    }
+
+    public int getDirection() {
+        return direction;
+    }
+
+    public void setDirection(int direction) {
+        this.direction = direction;
+    }
+
+    public double getBulletspeed() {
+        return bulletspeed;
+    }
+
+    public void setBulletspeed(int bulletspeed) {
+        this.bulletspeed = bulletspeed;
+    }
+
     /**
      * 飞机射击方法，可射击对象必须实现
      * @return

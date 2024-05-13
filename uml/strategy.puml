@@ -1,0 +1,94 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+abstract class AbstractAircraft
+{
+    - strategy:ShootStrategy
+	# maxHp:int
+    # hp:int
+    + AbstractAircraft(int locationX, int locationY, int speedX, int speedY, int hp)
+    + decreaseHp(int decrease):void
+    + getHp():int
+    + setShootStrategy(String strategy)
+    + shoot():List<BaseBullet>
+    + getStrategy():ShootStrategy
+    + setStrategy():void
+ }
+
+interface ShootStrategy
+{
+    + ShootAction():List<BaseBullet>
+}
+
+class straightShoot
+{
+    + ShootAction():List<BaseBullet>
+}
+
+class arcShoot
+{
+    + ShootAction():List<BaseBullet>
+}
+
+class circleShoot
+{
+    + ShootAction():List<BaseBullet>
+}
+
+straightShoot ..|>ShootStrategy
+arcShoot ..|> ShootStrategy
+circleShoot ..|> ShootStrategy
+AbstractAircraft o--> ShootStrategy
+
+class ArcBulletProp
+{
+    + ArcBulletProp(int locationX, int locationY,int speedX, int speedY)
+    + valid():void
+}
+
+ArcBulletProp --> AbstractAircraft
+ArcBulletProp ..> arcShoot
+
+class CircleBulletProp
+{
+    + CircleBulletProp(int locationX, int locationY,int speedX, int speedY)
+    + valid():void
+}
+
+CircleBulletProp --> AbstractAircraft
+CircleBulletProp ..> circleShoot
+
+
+class EliteEnemy {
+    + EliteEnemy(int locationX, int locationY, int speedX, int speedY, int hp)
+    + forward():void
+    + shoot():List<BaseBullet>
+    + dropProp():List<BaseProp>
+    + getScore():int
+}
+
+class ElitePlus{
+    + ElitePlus(int locationX, int locationY, int speedX, int speedY, int hp)
+    + forward():void
+    + shoot():List<BaseBullet>
+    + dropProp():List<BaseProp>
+    + getScore():int
+}
+
+class Boss{
+    + Boss(int locationX, int locationY, int speedX, int speedY, int hp)
+    + forward():void
+    + shoot():List<BaseBullet>
+    + dropProp():List<BaseProp>
+    + getScore():int
+}
+
+EliteEnemy ..>straightShoot
+EliteEnemy -->AbstractAircraft
+ElitePlus ..>arcShoot
+ElitePlus -->AbstractAircraft
+Boss ..>circleShoot
+Boss -->AbstractAircraft
+
+@enduml

@@ -17,7 +17,11 @@ public class MobAircraftCreator implements EnemyAircraftCreator{
                 (int) (Math.random() * Main.WINDOW_HEIGHT * 0.05),
                 0,
                 10,
-                30
+                30,
+                0,
+                0,
+                0,
+                0
         );
     }
 }

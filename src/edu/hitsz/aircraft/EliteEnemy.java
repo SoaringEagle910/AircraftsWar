@@ -1,15 +1,14 @@
 package edu.hitsz.aircraft;
 
 import edu.hitsz.Prop.BaseProp;
-import edu.hitsz.Prop.BloodProp;
-import edu.hitsz.Prop.BombProp;
-import edu.hitsz.Prop.BulletProp;
+import edu.hitsz.application.ImageManager;
 import edu.hitsz.application.Main;
 import edu.hitsz.bullet.BaseBullet;
-import edu.hitsz.bullet.EnemyBullet;
 import edu.hitsz.propfactory.BloodPropCreator;
 import edu.hitsz.propfactory.BombPropCreator;
-import edu.hitsz.propfactory.BulletPropCreator;
+import edu.hitsz.propfactory.ArcBulletPropCreator;
+import edu.hitsz.shootStrategy.ShootStrategy;
+import edu.hitsz.shootStrategy.straightShoot;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -22,80 +21,37 @@ import java.util.List;
  */
 public class EliteEnemy extends AbstractEnemyAircraft {
 
-    public EliteEnemy(int locationX, int locationY, int speedX, int speedY, int hp) {
-        super(locationX, locationY, speedX, speedY, hp);
+    public EliteEnemy(int locationX, int locationY, int speedX, int speedY, int hp,int shootNum,int power,int direction,int bulletspeed) {
+        super(locationX, locationY, speedX, speedY, hp,shootNum,power,direction,bulletspeed);
     }
 
     @Override
     public void forward() {
         super.forward();
         // 判定 y 轴向下飞行出界
-        if (locationY >= Main.WINDOW_HEIGHT ) {
+        if (locationY >= Main.WINDOW_HEIGHT) {
             vanish();
         }
     }
 
     /**攻击方式 */
 
-    /**
-     * 子弹一次发射数量
-     */
-    private int shootNum = 1;
 
-    /**
-     * 子弹伤害
-     */
-    private int power = 30;
+    private int score=15;
 
-    /**
-     * 子弹射击方向 (向上发射：1，向下发射：-1)
-     */
-    private int direction = 1;
-    private int propSpeedX=0,propSpeedY=5;
-
-
+    //private ShootStrategy strategy=new straightShoot();
     @Override
     public List<BaseBullet> shoot() {
-        List<BaseBullet> res = new LinkedList<>();
-        int x = this.getLocationX();
-        int y = this.getLocationY() + direction*2;
-        int speedX = 0;
-        int speedY = this.getSpeedY() + direction*5;
-        BaseBullet bullet;
-        for(int i=0; i<shootNum; i++){
-            // 子弹发射位置相对飞机位置向前偏移
-            // 多个子弹横向分散
-            bullet = new EnemyBullet(x + (i*2 - shootNum + 1)*10, y, speedX, speedY, power);
-            res.add(bullet);
-        }
-        return res;
+        this.setStrategy(new straightShoot());
+        return this.getStrategy().ShootAction(this);
     }
 
-    public BaseProp dropProp()
+    public int getScore()
     {
-        BaseProp prop;
-        double x=Math.random();
-        if(x<0.3)
-        {
-            //System.out.println("无道具掉落");
-            return null;
-        }
-        else if(x<0.6)
-        {
-            //System.out.println("blood道具掉落");
-            prop= new BloodPropCreator().Create(locationX,locationY,propSpeedX,propSpeedY);
-        }
-        else if(x<0.8)
-        {
-            //System.out.println("bomb道具掉落");
-            prop=new BombPropCreator().Create(locationX,locationY,propSpeedX,propSpeedY);
-        }
-        else
-        {
-            //System.out.println("bullet道具掉落");
-            prop =new BulletPropCreator().Create(locationX,locationY,propSpeedX,propSpeedY);
-        }
-        return prop;
+        return score;
     }
+
+
+
 
 }

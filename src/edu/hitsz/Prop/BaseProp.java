@@ -1,5 +1,8 @@
 package edu.hitsz.Prop;
 
+import edu.hitsz.Thread.BaseMusicThread;
+import edu.hitsz.aircraft.HeroAircraft;
+import edu.hitsz.application.Game;
 import edu.hitsz.application.Main;
 import edu.hitsz.basic.AbstractFlyingObject;
 
@@ -28,6 +31,15 @@ public abstract class BaseProp extends AbstractFlyingObject{
             // 向上飞行出界
             vanish();
         }
+    }
+    abstract public void valid();
+    public void getSupplyMusic()
+    {
+        if(Game.getMusic_on()==1){
+            BaseMusicThread getSuplyMusic=new BaseMusicThread("src/videos/get_supply.wav");
+            getSuplyMusic.start();
+        }
+
     }
 }
 

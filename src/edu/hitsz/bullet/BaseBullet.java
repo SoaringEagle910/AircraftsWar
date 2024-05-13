@@ -9,11 +9,11 @@ import edu.hitsz.basic.AbstractFlyingObject;
  *
  * @author hitsz
  */
-public abstract class BaseBullet extends AbstractFlyingObject {
+public class BaseBullet extends AbstractFlyingObject {
 
     private int power = 10;
 
-    public BaseBullet(int locationX, int locationY, int speedX, int speedY, int power) {
+    public BaseBullet(double locationX, double locationY, double speedX, double speedY, int power) {
         super(locationX, locationY, speedX, speedY);
         this.power = power;
     }
@@ -31,7 +31,7 @@ public abstract class BaseBullet extends AbstractFlyingObject {
         if (speedY > 0 && locationY >= Main.WINDOW_HEIGHT ) {
             // 向下飞行出界
             vanish();
-        }else if (locationY <= 0){
+        }else if (locationY <= -300){
             // 向上飞行出界
             vanish();
         }
@@ -40,4 +40,6 @@ public abstract class BaseBullet extends AbstractFlyingObject {
     public int getPower() {
         return power;
     }
+
+
 }

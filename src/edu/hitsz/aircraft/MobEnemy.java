@@ -1,7 +1,12 @@
 package edu.hitsz.aircraft;
 
+import edu.hitsz.Prop.BaseProp;
+import edu.hitsz.application.ImageManager;
 import edu.hitsz.application.Main;
 import edu.hitsz.bullet.BaseBullet;
+import edu.hitsz.propfactory.BloodPropCreator;
+import edu.hitsz.propfactory.BombPropCreator;
+import edu.hitsz.propfactory.ArcBulletPropCreator;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -12,10 +17,13 @@ import java.util.List;
  *
  * @author hitsz
  */
+
+
 public class MobEnemy extends AbstractEnemyAircraft {
 
-    public MobEnemy(int locationX, int locationY, int speedX, int speedY, int hp) {
-        super(locationX, locationY, speedX, speedY, hp);
+    private int score=10;
+    public MobEnemy(int locationX, int locationY, int speedX, int speedY, int hp,int shootNum,int power,int direction,int bulletspeed) {
+        super(locationX, locationY, speedX, speedY, hp,shootNum,power,direction,bulletspeed);
     }
 
     @Override
@@ -30,6 +38,11 @@ public class MobEnemy extends AbstractEnemyAircraft {
     @Override
     public List<BaseBullet> shoot() {
         return new LinkedList<>();
+    }
+
+    public int getScore()
+    {
+        return score;
     }
 
 }
