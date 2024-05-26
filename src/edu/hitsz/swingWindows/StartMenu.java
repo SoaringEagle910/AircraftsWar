@@ -1,8 +1,6 @@
 package edu.hitsz.swingWindows;
 
-import edu.hitsz.application.Game;
-import edu.hitsz.application.ImageManager;
-import edu.hitsz.application.Main;
+import edu.hitsz.application.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,6 +20,7 @@ public class StartMenu {
     private JPanel MainPanel;
 
     public static int difficulty=0;
+    private static Game game;
 
     public int getDifficulty() {
         return difficulty;
@@ -32,6 +31,7 @@ public class StartMenu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 difficulty=1;
+                game=new SimpleGame();
                 Start();
             }
         });
@@ -39,6 +39,7 @@ public class StartMenu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 difficulty=2;
+                game=new NormalGame();
                 Start();
             }
         });
@@ -46,13 +47,14 @@ public class StartMenu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 difficulty=3;
+                game=new HardGame();
                 Start();
             }
         });
     }
     private void Start(){
         String selectedOption = (String) musicChoiceBox.getSelectedItem();
-        Game game =new Game();
+        //Game game =new Game();
         if(selectedOption=="开")game.setMusic_on(1);
         else game.setMusic_on(0);
         Main.cardPanel.add(game);

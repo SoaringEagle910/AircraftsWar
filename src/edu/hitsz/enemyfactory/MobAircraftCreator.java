@@ -10,14 +10,15 @@ public class MobAircraftCreator implements EnemyAircraftCreator{
     {
         return;
     }
+    public static int mobHp=30;
     @Override
-    public AbstractEnemyAircraft Create() {
+    public MobEnemy Create() {
         return new MobEnemy(
                 (int) (Math.random() * (Main.WINDOW_WIDTH - ImageManager.MOB_ENEMY_IMAGE.getWidth())),
                 (int) (Math.random() * Main.WINDOW_HEIGHT * 0.05),
                 0,
-                10,
-                30,
+                4,
+                mobHp,
                 0,
                 0,
                 0,

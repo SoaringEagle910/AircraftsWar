@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class Record {
+  - rank: int
+  - name: String
+  - mark: int
+  - time: LocalDateTime
+
+  + Record(int rank,String name,int mark,LocalDateTime time)
+  + getRank(): int
+  + setRank(rank: int): void
+  + getName(): String
+  + setName(name: String): void
+  + getMark(): int
+  + setMark(mark: int): void
+  + getTime(): LocalDateTime
+  + setTime(time: LocalDateTime): void
+}
+interface RecordDao{
+    + findByRank(int rank):Record
+    + getAllRecord():List<Record>
+    + doAdd(Record record):void
+    + doDelete(int rank):void
+}
+class RecordDaoImpl{
+    + findByRank(int rank):Record
+    + getAllRecord():List<Record>
+    + doAdd(Record record):void
+    + doDelete(int rank):void
+}
+
+RecordDao <|.. RecordDaoImpl
+RecordDaoImpl -->Record
+
+
+
+
+@enduml

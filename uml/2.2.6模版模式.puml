@@ -1,0 +1,73 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+abstract class Game {
+  # enemyshootT: int
+  # enemycreateT: int
+  # enemyMaxNumber: int
+  + heroshootT: int
+  # bossMode: boolean
+  # moreDifficulty: boolean
+  # greaterBoss: boolean
+  # scoreCreateBoss: int
+  - enemyshootcount: int
+  - enemycreatecount: int
+  - heroshootcount: int
+  - bgMusicThread: AlwaysMusicThread
+  - endMusicThread: BaseMusicThread
+  + {static} ELITE_POSIBILITY: double
+  + {static} ELITE_PLUS_POSIBILITY: double
+  - backGroundTop: int
+  - executorService: ScheduledExecutorService
+  - timeInterval: int
+  - heroAircraft: HeroAircraft
+  + {static} enemyAircrafts: List<AbstractEnemyAircraft>
+  - heroBullets: List<BaseBullet>
+  - enemyBullets: List<BaseBullet>
+  - props: List<BaseProp>
+  - {static} score: int
+  - prescore: int
+  - time: int
+  - preTime: int
+  - cycleDuration: int
+  - cycleTime: int
+  - gameOverFlag: boolean
+  - {static} music_on: int
+  + getMusic_on(): int
+  + setMusic_on(int): void
+  + game()
+  + action():void
+  + setDifficulty():void
+  - createEnemy():void
+  - timeCountAndNewCycleJudge():boolean
+  - heroShootAction():void
+  - enemyShootAction():void
+  - bulletsMoveAction():void
+  - aircraftsMoveAction():void
+  - propsMoveAction():void
+  - crashCheckAction():void
+  - postProcessAction():void
+  + paint(Graphics g):void
+  - paintImageWithPositionRevised(Graphics g, List<? extends AbstractFlyingObject> objects):void
+  - rotateImage(BufferedImage image, double angle):BufferedImage
+  - paintScoreAndLife(Graphics g):void
+  - paintHpBar(Graphics g):void
+}
+
+class SimpleGame{
+    + setDifficulty():void
+}
+class NormalGame{
+    + setDifficulty():void
+}
+class HardGame{
+    + setDifficulty():void
+}
+
+Game <|-- SimpleGame
+Game <|-- NormalGame
+Game <|-- HardGame
+
+@enduml

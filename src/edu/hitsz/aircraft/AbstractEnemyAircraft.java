@@ -1,7 +1,9 @@
 package edu.hitsz.aircraft;
 import edu.hitsz.Prop.BaseProp;
+import edu.hitsz.Prop.PropObserver;
 import edu.hitsz.application.ImageManager;
 import edu.hitsz.bullet.BaseBullet;
+import edu.hitsz.bullet.EnemyBullet;
 import edu.hitsz.propfactory.ArcBulletPropCreator;
 import edu.hitsz.propfactory.BloodPropCreator;
 import edu.hitsz.propfactory.BombPropCreator;
@@ -11,7 +13,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public abstract class AbstractEnemyAircraft extends AbstractAircraft{
+public abstract class AbstractEnemyAircraft extends AbstractAircraft implements PropObserver {
 
     public AbstractEnemyAircraft(double locationX, double locationY, double speedX, double speedY, int hp,int shootNum,int power,int direction,int bulletspeed) {
         super(locationX, locationY, speedX, speedY,hp,shootNum,power,direction,bulletspeed);

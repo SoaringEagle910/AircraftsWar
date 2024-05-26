@@ -1,0 +1,53 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+abstract class AbstractEnemyAircraft {
+  - propSpeedX: int
+  - propSpeedY: int
+
+  + AbstractEnemyAircraft(double locationX, double locationY, double speedX, double speedY, int hp, int shootNum, int power, int direction, int bulletSpeed
+  + dropProp(): List<BaseProp>
+  + shoot(): List<BaseBullet>
+  + getScore(): int
+}
+
+
+
+
+class EnemyBullet{
+    + EnemyBullet(double locationX, double locationY, double speedX, double speedY, int power)
+    + update(int power):void
+}
+
+
+
+
+
+class BombValid {
+  - {static} bombObservers: List<PropObserver>
+
+  + {static} getBombObservers(): List<PropObserver>
+  + {static} addObserver(bombObserver: PropObserver): void
+  + {static} removeObserver(bombObserver: PropObserver): void
+  + {static} nodifyAll(power: int): void
+  + {static} bombWork(power: int): void
+}
+
+interface PropObserver{
+    + update(int power):void
+}
+
+
+PropObserver <|.. AbstractEnemyAircraft
+PropObserver <|.. EnemyBullet
+BombValid o--> PropObserver
+
+
+
+
+
+
+
+@enduml

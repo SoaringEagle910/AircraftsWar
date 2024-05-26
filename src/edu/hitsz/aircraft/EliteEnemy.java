@@ -1,6 +1,7 @@
 package edu.hitsz.aircraft;
 
 import edu.hitsz.Prop.BaseProp;
+import edu.hitsz.Prop.PropObserver;
 import edu.hitsz.application.ImageManager;
 import edu.hitsz.application.Main;
 import edu.hitsz.bullet.BaseBullet;
@@ -19,7 +20,7 @@ import java.util.List;
  *
  * @author hitsz
  */
-public class EliteEnemy extends AbstractEnemyAircraft {
+public class EliteEnemy extends AbstractEnemyAircraft implements PropObserver {
 
     public EliteEnemy(int locationX, int locationY, int speedX, int speedY, int hp,int shootNum,int power,int direction,int bulletspeed) {
         super(locationX, locationY, speedX, speedY, hp,shootNum,power,direction,bulletspeed);
@@ -51,6 +52,11 @@ public class EliteEnemy extends AbstractEnemyAircraft {
         return score;
     }
 
+
+    @Override
+    public void update(int power){
+        this.vanish();
+    }
 
 
 

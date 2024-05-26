@@ -19,9 +19,9 @@ public class circleShoot implements ShootStrategy{
         double PI=3.14159;
         double theta=0;
         double R = 50;
-        double v=5;
         if(aircraft.getClass()== HeroAircraft.class)
         {
+            double v=5;
             for (int i = 0; i < aircraft.getShootNum(); i++) {
                 // 子弹发射位置相对飞机位置向前偏移
                 // 多个子弹横向分散
@@ -34,6 +34,7 @@ public class circleShoot implements ShootStrategy{
         }
         else
         {
+            double v=2;
             for (int i = 0; i < aircraft.getShootNum(); i++) {
                 // 子弹发射位置相对飞机位置向前偏移
                 // 多个子弹横向分散

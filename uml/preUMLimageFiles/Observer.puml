@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface propObserver{
+    + work():void
+}
+
+class bombObserver{
+    + work():void
+}
+
+class BombProp{
+    - enemyAircrafts:List<AbstractEnemyAircraft>
+    + addAircraft(AbstractEnemyAircraft enemyAircraft):void
+    + removeAircraft(AbstractEnemyAircraft enemyAircraft):void
+    + nodifyAll():void
+    + bombWork(int power):void
+}
+
+class game{
+
+}
+
+bombObserver --|> propObserver
+BombProp o-->propObserver
+game --> BombProp
+game ..>bombObserver
+
+@enduml

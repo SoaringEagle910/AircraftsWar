@@ -11,6 +11,8 @@ import edu.hitsz.bullet.HeroBullet;
 import edu.hitsz.swingWindows.StartMenu;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -101,5 +103,21 @@ public class ImageManager {
         }
         return get(obj.getClass().getName());
     }
+
+    public static BufferedImage rotateImage(BufferedImage image, double angle) {
+        int width = image.getWidth();
+        int height = image.getHeight();
+        BufferedImage rotatedImage = new BufferedImage(height, width, image.getType());
+        Graphics2D g2d = rotatedImage.createGraphics();
+        AffineTransform at = new AffineTransform();
+        at.translate((height - width) / 2, (width - height) / 2);
+        at.rotate(Math.toRadians(angle), width / 2, height / 2);
+        g2d.drawImage(image, at, null);
+        g2d.dispose();
+        return rotatedImage;
+    }
+
+
+
 
 }

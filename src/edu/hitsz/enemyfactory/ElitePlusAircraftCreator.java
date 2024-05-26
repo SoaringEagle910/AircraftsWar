@@ -6,17 +6,19 @@ import edu.hitsz.application.ImageManager;
 import edu.hitsz.application.Main;
 
 public class ElitePlusAircraftCreator implements EnemyAircraftCreator{
-    public AbstractEnemyAircraft Create(){
+    public static int elitePlusHp=600;
+    @Override
+    public ElitePlus Create(){
         return new ElitePlus(
                 (int) (Math.random() * (Main.WINDOW_WIDTH - ImageManager.ELITE_PLUS_IMAGE.getWidth())),
                 (int) (Math.random() * Main.WINDOW_HEIGHT * 0.05),
                 3,
-                4,
-                60,
+                1,
+                elitePlusHp,
                 3,
                 30,
                 1,
-                10
+                3
         );
     }
 }

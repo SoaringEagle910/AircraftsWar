@@ -16,10 +16,11 @@ public class straightShoot implements ShootStrategy{
         List<BaseBullet> res = new LinkedList<>();
         double x = aircraft.getLocationX();
         double y = aircraft.getLocationY() + aircraft.getDirection() * 2;
-        double speedX = 0;
-        double speedY = aircraft.getSpeedY() + aircraft.getDirection() * 5;
+
         BaseBullet bullet;
         if(aircraft.getClass()==HeroAircraft.class){
+            double speedX = 0;
+            double speedY = aircraft.getSpeedY() + aircraft.getDirection() * 5;
             for (int i = 0; i < aircraft.getShootNum(); i++) {
                 // 子弹发射位置相对飞机位置向前偏移
                 // 多个子弹横向分散
@@ -28,6 +29,8 @@ public class straightShoot implements ShootStrategy{
             }
         }
         else {
+            double speedX = 0;
+            double speedY = aircraft.getSpeedY() + aircraft.getDirection() *2;
             for (int i = 0; i < aircraft.getShootNum(); i++) {
                 // 子弹发射位置相对飞机位置向前偏移
                 // 多个子弹横向分散

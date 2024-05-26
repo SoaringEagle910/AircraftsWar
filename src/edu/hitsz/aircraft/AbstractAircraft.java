@@ -22,7 +22,7 @@ public abstract class AbstractAircraft extends AbstractFlyingObject {
     private int shootNum;
     private int power;
     private int direction;
-    private int bulletspeed;
+    private int bulletSpeed;
 
     public AbstractAircraft(double locationX, double locationY, double speedX, double speedY, int hp,int shootNum,int power,int direction,int bulletspeed) {
         super(locationX, locationY, speedX, speedY);
@@ -31,7 +31,7 @@ public abstract class AbstractAircraft extends AbstractFlyingObject {
         this.shootNum=shootNum;
         this.power=power;
         this.direction=direction;
-        this.bulletspeed=bulletspeed;
+        this.bulletSpeed=bulletspeed;
     }
 
     private ShootStrategy strategy=new straightShoot();
@@ -70,6 +70,10 @@ public abstract class AbstractAircraft extends AbstractFlyingObject {
         return shootNum;
     }
 
+    public int getMaxHp() {
+        return maxHp;
+    }
+
     public int getPower() {
         return power;
     }
@@ -87,11 +91,11 @@ public abstract class AbstractAircraft extends AbstractFlyingObject {
     }
 
     public double getBulletspeed() {
-        return bulletspeed;
+        return bulletSpeed;
     }
 
     public void setBulletspeed(int bulletspeed) {
-        this.bulletspeed = bulletspeed;
+        this.bulletSpeed = bulletspeed;
     }
 
     /**

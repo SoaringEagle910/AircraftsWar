@@ -5,56 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9cdcd3d-5867-492a-921b-fa655352b77d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AircraftsWar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AircraftsWar.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/Prop/BaseProp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/Prop/BaseProp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/Prop/BloodProp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/Prop/BloodProp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/Prop/ArcBulletProp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/Prop/ArcBulletProp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/Prop/BombProp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/Prop/BombProp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/Prop/BulletProp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/Prop/CircleBulletProp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/Prop/CircleBulletProp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/AbstractAircraft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/AbstractAircraft.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/AbstractEnemyAircraft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/AbstractEnemyAircraft.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/Boss.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/Boss.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/EliteEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/EliteEnemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/HeroAircraft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/HeroAircraft.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/ElitePlus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/ElitePlus.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/MobEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/aircraft/MobEnemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/application/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/application/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/application/ImageManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/application/ImageManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/application/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/application/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/basic/AbstractFlyingObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/basic/AbstractFlyingObject.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/bullet/BaseBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/bullet/BaseBullet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/bullet/EnemyBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/bullet/EnemyBullet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/bullet/HeroBullet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/bullet/HeroBullet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/enemyfactory/BossAircraftCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/enemyfactory/BossAircraftCreator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/enemyfactory/EliteAirCraftCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/enemyfactory/EliteAirCraftCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/enemyfactory/ElitePlusAircraftCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/enemyfactory/ElitePlusAircraftCreator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/enemyfactory/MobAircraftCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/enemyfactory/MobAircraftCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/propfactory/BulletPropCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/images/prop_bullet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/Prop/BaseProp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/Prop/BaseProp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/Prop/BloodProp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/Prop/BloodProp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/shootStrategy/arcShoot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/shootStrategy/arcShoot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/shootStrategy/circleShoot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/shootStrategy/circleShoot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/shootStrategy/straightShoot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/shootStrategy/straightShoot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/swingWindows/StartMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/swingWindows/StartMenu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/swingWindows/StartMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/swingWindows/StartMenu$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/swingWindows/StartMenu$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/swingWindows/StartMenu$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/swingWindows/StartMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/edu/hitsz/swingWindows/StartMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AircraftsWar/records/records.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AircraftsWar/records/records.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/Prop/ArcBulletProp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/Prop/ArcBulletProp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/hitsz/Prop/BombProp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/Prop/BombProp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/Prop/BulletProp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/Prop/ArcBulletProp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/Prop/CircleBulletProp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/Prop/CircleBulletProp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/hitsz/aircraft/AbstractAircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/aircraft/AbstractAircraft.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/hitsz/aircraft/AbstractEnemyAircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/aircraft/AbstractEnemyAircraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/aircraft/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/aircraft/Boss.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/hitsz/aircraft/EliteEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/aircraft/EliteEnemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/aircraft/HeroAircraft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/aircraft/HeroAircraft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/aircraft/ElitePlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/aircraft/ElitePlus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/hitsz/aircraft/MobEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/aircraft/MobEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/hitsz/application/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/application/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/hitsz/application/ImageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/application/ImageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/application/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/basic/AbstractFlyingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/basic/AbstractFlyingObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/hitsz/bullet/BaseBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/bullet/BaseBullet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/hitsz/bullet/EnemyBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/bullet/EnemyBullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/bullet/HeroBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/bullet/HeroBullet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/enemyfactory/EliteAirCraftCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/enemyfactory/EliteAircraftCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/enemyfactory/BossAircraftCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/enemyfactory/BossAircraftCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/enemyfactory/EliteAircraftCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/enemyfactory/EliteAircraftCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/enemyfactory/ElitePlusAircraftCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/enemyfactory/ElitePlusAircraftCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/hitsz/enemyfactory/MobAircraftCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/enemyfactory/MobAircraftCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/propfactory/BulletPropCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/propfactory/ArcBulletPropCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/prop_bullet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/UMLImageWithFactory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/UMLImageWithFactory.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/UMLImageWithFactory.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/preUMLimageFiles/UMLImage.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/preUMLimageFiles/testenemyaircraft.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uml/preUMLimageFiles/testprop.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/shootStrategy/arcShoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/shootStrategy/arcShoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/shootStrategy/circleShoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/shootStrategy/circleShoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/shootStrategy/straightShoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/shootStrategy/straightShoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/hitsz/swingWindows/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/hitsz/swingWindows/StartMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/records/records.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/records/records.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/DAO.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/preUMLimageFiles/DAO.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/UMLimage.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/preUMLimageFiles/UMLimage.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml/strategy.puml" beforeDir="false" afterPath="$PROJECT_DIR$/uml/preUMLimageFiles/strategy.puml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +111,9 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PROJECTS\AircraftsWar\project\AircraftsWar\uml\preUMLimageFiles" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="edu.hitsz.aircraft" />
